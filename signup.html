@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>body {
+    font-family: Arial, sans-serif;
+    background-color: #f2ebf5;
+    margin: 0;
+    padding: 0;
+}
+
+.signup-container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #6e3482;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+    display: block;
+}
+
+input {
+    width: calc(100% - 30px);
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #25d64f;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+.role-selection {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust the gap between radio buttons and text */
+    margin-bottom: 20px; /* Adds space below the radio buttons */
+    cursor: pointer;
+}
+
+.role-selection input[type="radio"] {
+    margin: 0;
+    vertical-align: middle;
+}
+
+.role-selection label {
+    margin: 0;
+}
+</style>
+<body>
+    <div class="signup-container">
+        <h2>Create an Account</h2>
+        <form id="signupForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            
+             <div class="role-selection">
+            <input type="radio" id="customer" name="role" value="Customer">
+            <label for="customer">Customer</label>
+
+            <input type="radio" id="seller" name="role" value="Seller">
+            <label for="seller">Seller</label>
+        </div>
+
+
+            <button onclick="window.open('marketplace.html', '_blank')">Sign Up</button>
+            <p>Already have an account? <a href="login.html">Login</a></p>
+            <p>By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+            <p>Need help? <a href="#">Contact Support</a></p>
+        </form>
+        <p id="successMessage" class="success"></p>
+        <p id="errorMessage" class="error"></p>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
